@@ -41,28 +41,22 @@ kaho-perspective-v2/
 ├── SKILL.md                          # 角色扮演核心（工作流/6心智模型/10决策启发式/条件化表达DNA/检查点/自检/时间线）
 ├── README.md
 └── references/
-    ├── research/                     # 18 份精读/调研文件（01-06 网络轨 + 07-18 本地语料轨）
-    │   ├── 01-official-settings.md   #   官方设定
-    │   ├── 02-interviews.md          #   制作人/声优访谈
-    │   ├── 03-fan-analysis.md        #   玩家考察
-    │   ├── 04-media.md               #   媒体出场（动画/广播/LIVE）
-    │   ├── 05-timeline.md            #   时间线
-    │   ├── 06-critiques.md           #   批评视角
-    │   └── 07-main-stories.md … 18-voices.md   # 12 份语料逐条精读（全部带段落 id 可溯源）
-    ├── sources/
-    │   └── enza/语料索引.md          # 本地语料全量索引与完整性验证
-    ├── validation-known-tests.md     # 已知场景验证（3/3 PASS，含っ分布逐句核查）
-    ├── validation-edge-style-tests.md # 边缘风格测试
-    └── refinement-a.md / refinement-b.md  # 两轮结构评审记录
+    └── research/                     # 网络调研 6 份（含来源链接，可查证；语料精读底稿不随仓库分发）
+        ├── 01-official-settings.md   #   官方设定
+        ├── 02-interviews.md          #   制作人/声优访谈
+        ├── 03-fan-analysis.md        #   玩家考察
+        ├── 04-media.md               #   媒体出场（动画/广播/LIVE）
+        ├── 05-timeline.md            #   时间线
+        └── 06-critiques.md           #   批评视角
 ```
 
-## 蒸馏方法（双轨调研）
+## 蒸馏方法
 
-1. **本地语料轨（信息源权重最高）**：enza 静态资源全量扫描，`json/` 下 10,740 个剧情 JSON 中按 `speaker == 「果穂」` 命中 686 个文件（角色编号 009），全部完整抓取，无缺失；12 个并行 agent 逐条精读后落盘 `research/07-18`。
-2. **网络调研轨**：nuwa 标准 6 维 Agent（官方设定/声优访谈/玩家考察/媒体出场/时间线/批评视角），落盘 `research/01-06`，本地语料证据优先于网络二手信息。
-3. **验证**：已知场景 Sanity Check（3/3 PASS）+ 边缘风格测试 + 两轮结构评审（8 维度评估），全部记录于 `references/`。
+1. **语料层（一手原文，权重最高）**：enza 静态资源全量扫描，`json/` 下 10,740 个剧情 JSON 中按 `speaker == 「果穂」` 命中 686 个文件（角色编号 009）/ 9011 行台词，逐条精读蒸馏，全部证据带段落 id 可回溯。
+2. **网络调研轨**：官方设定/制作人访谈/声优访谈/玩家考察/媒体出场/时间线/批评视角 6 维调研，落盘 `references/research/01-06`，含来源链接。
+3. **验证**：蒸馏过程经已知场景 Sanity Check、边缘风格测试与两轮结构评审（记录于开发环境，不随仓库分发）。
 
-台词全文存档于本地素材目录（`H:\grok\shinyclaor\kaho_all\`），未随仓库分发；如需完整台词集可另行打包。
+> **开箱即用**：本 Skill 的全部扮演规则、心智模型、决策启发式与表达 DNA 均内嵌于 `SKILL.md`，安装后无需任何本地数据即可直接使用。台词全文（686 文件 / 9011 行）仅为蒸馏底稿，存档于开发环境，不随仓库分发。
 
 ## 台词实证示例
 
